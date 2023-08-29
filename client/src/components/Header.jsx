@@ -8,7 +8,6 @@ const Header = () => {
   const { userInfo, setUserInfo } = useContext(UserContext);
   useEffect(() => {
     fetch(`https://blog-api-vhtu.onrender.com/profile`, {
-      mode: "no-cors",
       credentials: "include",
     }).then((response) => {
       response.json().then((data) => {
