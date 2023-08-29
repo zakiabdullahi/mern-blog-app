@@ -9,7 +9,7 @@ const PostPage = () => {
   const [postInfo, setPostInfo] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/post/${id}`).then((res) => {
+    fetch(`https://blog-api-vhtu.onrender.com/post/${id}`).then((res) => {
       res.json().then((postInfo) => {
         setPostInfo(postInfo);
       });
@@ -48,7 +48,10 @@ const PostPage = () => {
         </div>
       )}
       <div className="image">
-        <img src={`http://localhost:4000/${postInfo.cover}`} alt="" />
+        <img
+          src={`https://blog-api-vhtu.onrender.com/${postInfo.cover}`}
+          alt=""
+        />
       </div>
       <div
         className="content"
