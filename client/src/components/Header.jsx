@@ -7,7 +7,7 @@ const Header = () => {
   const navigate = useNavigate();
   const { userInfo, setUserInfo } = useContext(UserContext);
   useEffect(() => {
-    fetch(`http://localhost:4000/profile`, {
+    fetch(`https://blog-api-vhtu.onrender.com/profile`, {
       mode: "no-cors",
       credentials: "include",
     }).then((response) => {
