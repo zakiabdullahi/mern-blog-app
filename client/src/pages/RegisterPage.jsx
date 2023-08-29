@@ -6,16 +6,19 @@ const RegisterPage = () => {
   const register = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:4000/register", {
-      method: "POST",
-      body: JSON.stringify({
-        username,
-        password,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://blog-api-vhtu.onrender.com/register",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     // console.log(response);
     if (response.status === 200) {
       alert("register success");

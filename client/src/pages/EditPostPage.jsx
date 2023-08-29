@@ -32,7 +32,7 @@ const EditPostPage = () => {
     data.set("id", id);
     e.preventDefault();
 
-    const response = await fetch(`http://localhost:4000/post`, {
+    const response = await fetch(`https://blog-api-vhtu.onrender.com/post`, {
       method: "PUT",
       body: data,
       credentials: "include",
