@@ -22,7 +22,7 @@ const salt = bcrypt.genSaltSync(10)
 const secret = process.env.JWT_SECRET
 
 const port = process.env.PORT || 4000
-app.use(cors({ credentials: true, origin: 'https://mern-blog-app-navy.vercel.app' }));
+app.use(cors({ credentials: true, origin: ['https://blog-api-vhtu.onrender.com/', 'http://localhost:5173'] }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));

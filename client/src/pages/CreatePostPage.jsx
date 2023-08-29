@@ -21,7 +21,7 @@ const CreatePostPage = () => {
     // console.log(files);
     // console.log(data);
 
-    const response = await fetch("https://blog-api-vhtu.onrender.com/post", {
+    const response = await fetch("http://localhost:4000/post", {
       method: "POST",
       body: data,
       credentials: "include",
