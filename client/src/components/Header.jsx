@@ -8,6 +8,7 @@ const Header = () => {
   const { userInfo, setUserInfo } = useContext(UserContext);
   useEffect(() => {
     fetch(`http://localhost:4000/profile`, {
+      mode: "no-cors",
       credentials: "include",
     }).then((response) => {
       response.json().then((data) => {
