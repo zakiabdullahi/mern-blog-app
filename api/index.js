@@ -26,7 +26,7 @@ const port = process.env.PORT || 4000
 app.use(cors(
 
     {
-        origin: ['http://localhost:5173', 'https://mern-blog-app-navy.vercel.app/'],
+        origin: ['http://localhost:5173', 'https://blog-app-4dqq.onrender.com/'],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
@@ -92,6 +92,8 @@ app.post('/login', async (req, res) => {
 })
 
 app.get('/profile', (req, res) => {
+
+
 
 
     const { token } = req.cookies
