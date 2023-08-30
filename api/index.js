@@ -4,7 +4,6 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const connectDb = require('./config/db');
 const app = express();
-const corseOptions = require('./config/corsOption');
 const User = require('./models/User');
 const bcrypt = require('bcrypt');
 
@@ -25,15 +24,14 @@ const secret = process.env.JWT_SECRET
 const port = process.env.PORT || 4000
 
 
-app.use(cors(corseOptions));
-// app.use(cors(
+app.use(cors(
 
-//     {
-//         origin: ['http://localhost:5173', 'https://blog-app-4dqq.onrender.com/'],
-//         methods: ["POST", "GET", "PUT", "DELETE"],
-//         credentials: true
-//     }
-// ));
+    {
+        origin: ['http://localhost:5173', 'https://blog-app-4dqq.onrender.com/'],
+        methods: ["POST", "GET", "PUT", "DELETE"],
+        credentials: true
+    }
+));
 // app.use(cors({ credentials: true, origin: ['http://localhost:5173', 'https://mern-blog-app-navy.vercel.app/'] }));
 app.use(express.json());
 app.use(cookieParser());
