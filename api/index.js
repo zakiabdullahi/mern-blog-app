@@ -27,8 +27,7 @@ const port = process.env.PORT || 4000
 app.use(cors(
 
     {
-        origin: ['http://localhost:5173', 'https://blog-app-4dqq.onrender.com/'],
-        methods: ["POST", "GET", "PUT", "DELETE"],
+        origin: ['https://blog-app-4dqq.onrender.com/'],
         credentials: true
     }
 ));
@@ -93,7 +92,6 @@ app.post('/login', async (req, res) => {
 })
 
 app.get('/profile', (req, res) => {
-
 
 
 
@@ -224,7 +222,8 @@ app.get('/', (req, res) => {
     res.json('Hello World')
 })
 
-app.listen(4000, (req, res) => {
+
+app.listen(port, (req, res) => {
     console.log('listening on port 4000');
 })
 
