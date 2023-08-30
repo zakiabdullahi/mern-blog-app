@@ -28,6 +28,7 @@ app.use(cors(
 
     {
         origin: ['https://blog-app-4dqq.onrender.com/'],
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
         credentials: true
     }
 ));
